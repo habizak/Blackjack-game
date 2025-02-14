@@ -8,10 +8,7 @@
     <meta name="description" content="A Blackjack game using HTML, CSS, and JavaScript.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Passion+One:wght@400;700;900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
@@ -19,9 +16,9 @@
     <main class="game-area">
 
       <div class="header-logo">
-        <p class="ahgong">Ah Gong's</p>
+        <span class="ahgong">Ah Gong's</span>
         <h1 class="main-title">Blackjack</h1>
-        <p class="emoji">♠️ ♥️ ♦️ ♣️</p>
+        <p class="emoji"><span aria-hidden="true">♠️ ♥️ ♦️ ♣️</span></p>
       </div>
   
       <div class="play-area">
@@ -34,8 +31,8 @@
       </div>
 
       <div class="button-wrapper">
-      <button class="secondary-btn">Draw Card</button>
-      <button class="primary-btn">New Game</button>
+      <button class="secondary-btn" type="button">Draw Card</button>
+      <button class="primary-btn" type="button">New Game</button>
       </div>
 
     </main>
