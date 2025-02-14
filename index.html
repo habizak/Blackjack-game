@@ -2,14 +2,42 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>Black Jack</title>  
+    <title>Blackjack</title>  
     <meta name="author" content="Hafiz">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A Blackjack game using HTML, CSS, and JavaScript.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <script defer src="index.js"></script>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <main class="game-area">
 
+      <div class="header-logo">
+        <p class="ahgong">Ah Gong's</p>
+        <h1 class="main-title">Blackjack</h1>
+        <p class="emoji">♠️ ♥️ ♦️ ♣️</p>
+      </div>
+  
+      <div class="play-area">
+      <p id="message">"Do you want to draw a new card?"</p>
+      <div class="board"></div>
+        <div class="data">
+          <p><b>Sum</b></p>
+          <p><b>Wager</b></p>
+        </div>  
+      </div>
+
+      <div class="button-wrapper">
+      <button class="secondary-btn">Draw Card</button>
+      <button class="primary-btn">New Game</button>
+      </div>
+
+    </main>
   </body>
 </html>

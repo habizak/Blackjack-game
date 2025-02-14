@@ -1,0 +1,116 @@
+* {
+  font-family: "Rubik", serif;
+  margin: 0;
+}
+
+body {
+  background-color: #922d50;
+  color: #fff9fb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+main {
+  background-color: #3c1b43;
+  border: #d4e79e solid 4px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 380px;
+  padding: 32px 24px;
+  margin: 40px 0;
+}
+
+.ahgong {
+  font-family: "Passion One", serif;
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.main-title {
+  font-family: "Passion One", serif;
+  color: #d4e79e;
+  font-weight: 700;
+}
+
+.emoji {
+  font-size: 1.5rem;
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.play-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#message {
+  margin: 0 0 24px 0;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.board {
+  width: 332px;
+  height: 128px;
+  background-color: #922d50;
+  border-radius: 12px;
+}
+
+.data {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  margin: 16px 0;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  width: 192px;
+  height: 40px;
+  font-weight: 500;
+}
+
+.primary-btn {
+  background-color: #d4e79e;
+  color: #3c1b43;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.primary-btn:hover {
+  background-color: #b8c480;
+}
+
+.secondary-btn {
+  background-color: transparent;
+  border: #d4e79e 2px solid;
+  color: #d4e79e;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.secondary-btn:hover {
+  background-color: #b8c480;
+  border: #b8c480 2px solid;
+  color: #3c1b43;
+}
+
