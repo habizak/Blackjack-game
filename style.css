@@ -23,7 +23,7 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 40px;
-  max-width: 380px;
+  min-width: 380px;
   padding: 32px 24px;
   margin: 40px 0;
 }
@@ -57,17 +57,49 @@ main {
   align-items: center;
 }
 
-#message {
+.game-message {
   margin: 0 0 24px 0;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 .board {
-  width: min(100%, 332px);
+  width: 332px;
   height: 128px;
   background-color: #922d50;
   border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.card {
+  background-color: #fff9fb;
+  border-radius: 4px;
+  width: 64px;
+  height: 84px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 4px 4px 4px 2px rgba(80, 21, 55, 0.5);
+}
+
+.card:hover {
+    transform: rotate(-2deg) scale(1.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 4px 4px 4px 4px rgba(80, 21, 55, 0.3);
+}
+
+
+.card-num {
+  font-family: "Passion One", serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #922d50;
 }
 
 .data {
@@ -75,6 +107,16 @@ main {
   flex-direction: row;
   gap: 24px;
   margin: 16px 0;
+}
+
+.data-title {
+  display: flex;
+  flex-direction: row;
+  font-weight: 500;
+}
+
+.data-value {
+  font-weight: 300;
 }
 
 .button-wrapper {

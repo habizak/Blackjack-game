@@ -22,17 +22,30 @@
       </div>
   
       <div class="play-area">
-      <p id="message">"Do you want to draw a new card?"</p>
-      <div class="board"></div>
+      </p><p class="game-message" id="messageEl">Want to play a round?</p>
+      <div class="board">
+        <div class="card">
+          <p class="card-num" id="card-1">11</p>
+        </div>
+        <div class="card">
+          <p class="card-num" id="card-2">10</p>
+        </div>
+      </div>
         <div class="data">
-          <p><b>Sum</b></p>
-          <p><b>Wager</b></p>
+          <div class="data-title">
+            <p>Sum:&nbsp;</p>
+            <p class="data-value" id="sum-val">N/A</p>
+          </div>
+          <div class="data-title">
+            <p>Wager:&nbsp;</p>
+            <p class="data-value" id="wager">N/A</p>
+          </div>
         </div>  
       </div>
 
       <div class="button-wrapper">
-      <button class="secondary-btn" type="button">Draw Card</button>
-      <button class="primary-btn" type="button">New Game</button>
+      <button class="secondary-btn" id="draw-card" onclick="drawCard()" type="button">Draw Card</button>
+      <button class="primary-btn" id="new-game" onclick="newGame()" type="button">New Game</button>
       </div>
 
     </main>
