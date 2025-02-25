@@ -1,36 +1,76 @@
-let firstCard = 5
+let firstCard = randomCard()
+let secondCard = randomCard()
+let cards = [firstCard, secondCard]
+let sum = firstCard + secondCard
+
 let cardOne = document.querySelector("#card-1")
-let secondCard = 3
 let cardTwo = document.querySelector("#card-2")
 let sumVal = document.querySelector("#sum-val")
-let sum = firstCard + secondCard
+
 let hasBlackJack = false
 let isAlive = true
 let message = ""
 let messageEl = document.querySelector("#messageEl")
 
+function randomCard() {
+        let randomNum = Math.floor( Math.random()*10)+1
+        if (randomNum >10) {
+            return 10
+        } else if (randomNum ===1) {
+            return 11
+        } else {
+            return randomNum
+        }
+    }
+
 function newGame() {
-    
+    let firstCard = randomCard()
+    let secondCard = randomCard()
+    cards = [firstCard, secondCard];
+    sum = firstCard + secondCard;
+    hasBlackJack = false;
+    isAlive = true;
+    let message = "";
+
+    renderGame();
 }
 
 function renderGame() {
-    if (sum <= 20) {
-        message = "Do you want to draw a card?"
-    } else if (sum === 21) {
-        message = "You've got Blackjack!"
-        hasBlackJack = true
-    } else {
-        message = "You're out of the game!"
-        isAlive = false
+    let cardsContainer = document.querySelector("#cards-container");
+    cardsContainer.innerHTML = ""; // Clear previous cards
+
+    // Loop through all cards and create new elements
+    for (let i = 0; i < cards.length; i++) {
+        let cardDiv = document.createElement("div"); // Create card container
+        cardDiv.classList.add("card"); // Add card styling
+
+        let cardNum = document.createElement("p"); // Create card number
+        cardNum.classList.add("card-num");
+        cardNum.textContent = cards[i]; // Set card value
+
+        cardDiv.appendChild(cardNum); // Add number to card
+        cardsContainer.appendChild(cardDiv); // Add card to container
     }
-    cardOne.textContent = `${firstCard}`;
-    cardTwo.textContent = `${secondCard}`;
-    sumVal.textContent = `${sum}`;
-    messageEl.textContent = `"${message}"`;
+
+    if (sum <= 20) {
+        message = "Do you want to draw a card?";
+    } else if (sum === 21) {
+        message = "You've got Blackjack!";
+        hasBlackJack = true;
+    } else {
+        message = "You're out of the game!";
+        isAlive = false;
+    }
+    
+    document.getElementById("sum-val").textContent = sum;
+    document.getElementById("messageEl").textContent = message;
 }
 
 function drawCard() {
-    let newCard = 5
-    sum += newCard
-    renderGame()
+    if (isAlive && !hasBlackJack) {
+        let newCard = randomCard();
+        cards.push(newCard); // Add the new card to the cards array
+        sum += newCard; // Update the sum
+        renderGame(); // Re-render the UI
+    }
 }
