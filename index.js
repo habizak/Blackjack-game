@@ -57,6 +57,16 @@ function renderGame() {
     } else if (sum === 21) {
         message = "You've got Blackjack!";
         hasBlackJack = true;
+
+        // ✅ Add this: Vibrate <main> when Blackjack happens
+        let mainElement = document.querySelector("main");
+        mainElement.classList.add("vibrate");
+
+        // Stop vibration after 1 second
+        setTimeout(() => {
+            mainElement.classList.remove("vibrate");
+        }, 1000);
+
     } else {
         message = "You're out of the game!";
         isAlive = false;
