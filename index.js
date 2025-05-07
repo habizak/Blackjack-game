@@ -1,14 +1,12 @@
-let firstCard = randomCard()
-let secondCard = randomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 
 let cardOne = document.querySelector("#card-1")
 let cardTwo = document.querySelector("#card-2")
 let sumVal = document.querySelector("#sum-val")
 
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.querySelector("#messageEl")
 
